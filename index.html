@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B12A06-Green-Earth-main</title>
+    <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- font -->
@@ -58,41 +59,51 @@
                 <h1 class="text-5xl font-semibold">Plant a Tree, Grow a Future</h1>
                 <p class="text-black ">Join our mission to plant 1 million trees and make the Earth greener for future
                     generations.</p>
-                <button class="btn bg-yellow-400 border-none rounded-full px-6 text-green-700 font-normal">Get Involved</button>
+                <button class="btn bg-yellow-400 border-none rounded-full px-6 text-green-700 font-normal">Get
+                    Involved</button>
             </div>
             <div>
                 <img src="assets/hero-leaf2.png" alt="">
             </div>
         </section>
     </header>
- <main>
-      <div class="text-center my-12 ">
-        <h1 class="text-3xl font-medium">Choose Your Trees</h1>
-      </div>
+    <main>
+        <div class="text-center my-12 ">
+            <h1 class="text-3xl font-medium">Choose Your Trees</h1>
+        </div>
 
-      <section class="grid grid-cols-12 gap-6">
-          
-       <aside  class="col-span-2 pl-4">
-          <p class="font-bold text-xl ">Categories </p>
-          <div id="category-btn" class="cursor-pointer">
+        <section class="grid lg:grid-cols-12 grid-cols-3 gap-6">
 
-          </div>
-       </aside>
-       <section  class="bg-yellow-400 col-span-8">
-              <div id="cart-container">
+            <aside class=" lg:col-span-2 col-span-1  pl-4">
+                <p class="font-bold text-xl ">Categories </p>
+                <div id="category-btn" class="cursor-pointer">
 
-              </div>
-       </section>
-       <aside  class="bg-red-400 col-span-2">asdf</aside>
-
-
-      </section>
- </main>
+                </div>
+            </aside>
+            <section class=" lg:col-span-8 col-span-2 ">
+                <div class="grid gap-4  grid-cols-1 lg:grid-cols-3" id="cart-container">
+                   
+                </div>
+            </section>
 
 
- <!-- js -->
-  <script src="js/index.js"></script>
- <!-- js -->
+            <aside class="bg-red-400 col-span-2">asdf</aside>
+
+
+        </section>
+    </main>
+    <footer>
+        <footer class="footer sm:footer-horizontal footer-center bg-green-600 text-base-content p-4">
+  <aside>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+  </aside>
+</footer>
+    </footer>
+
+
+    <!-- js -->
+    <script src="js/index.js"></script>
+    <!-- js -->
 </body>
 
 </html>
