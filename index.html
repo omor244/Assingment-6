@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B12A06-Green-Earth-main</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- font -->
+</head>
+
+<body class="inter bg-[#f0fdf4] ">
+    <header>
+        <nav class="bg-[#15803D] lg:px-32">
+            <div class="navbar  shadow-sm ">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu items-center menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li><a>About</a></li>
+                            <li><a href="">Gallery</a></li>
+                            <li><a>Plant a Tree</a></li>
+                        </ul>
+                    </div>
+                    <a class=" text-3xl font-bold text-white">Green Earth</a>
+                </div>
+                <div class="navbar-center hidden lg:flex items-center">
+                    <ul class="menu menu-horizontal px-2 font-normal text-white text-lg">
+                        <li><a>About</a></li>
+                        <li><a href="">Gallery</a></li>
+                        <li><a>Plant a Tree</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end ">
+                    <a class="btn bg-yellow-400 border-none rounded-full px-6 text-green-700">Plant a Tree</a>
+                </div>
+            </div>
+        </nav>
+        <section class="flex items-center bg-[#cff0dc] ">
+            <div>
+                <img src="assets/hero-leaf1.png" alt="">
+            </div>
+            <div class="text-center space-y-8">
+                <h1 class="text-5xl font-semibold">Plant a Tree, Grow a Future</h1>
+                <p class="text-black ">Join our mission to plant 1 million trees and make the Earth greener for future
+                    generations.</p>
+                <button class="btn bg-yellow-400 border-none rounded-full px-6 text-green-700 font-normal">Get Involved</button>
+            </div>
+            <div>
+                <img src="assets/hero-leaf2.png" alt="">
+            </div>
+        </section>
+    </header>
+ <main>
+      <div class="text-center my-12 ">
+        <h1 class="text-3xl font-medium">Choose Your Trees</h1>
+      </div>
+
+      <section class="grid grid-cols-12 gap-6">
+          
+       <aside  class="col-span-2 pl-4">
+          <p class="font-bold text-xl ">Categories </p>
+          <div id="category-btn" class="cursor-pointer">
+
+          </div>
+       </aside>
+       <section  class="bg-yellow-400 col-span-8">
+              <div id="cart-container">
+
+              </div>
+       </section>
+       <aside  class="bg-red-400 col-span-2">asdf</aside>
+
+
+      </section>
+ </main>
+
+
+ <!-- js -->
+  <script src="js/index.js"></script>
+ <!-- js -->
+</body>
+
+</html>
