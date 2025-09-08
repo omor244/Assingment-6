@@ -112,22 +112,67 @@
         <div class="text-center my-12 ">
             <h1 class="text-3xl font-medium">About the Campaign</h1>
         </div>
-        <section class="flex  justify-center items-center overflow-hidden my-20">
+        <section class=" lg:flex lg:p-2 p-4 justify-center items-center overflow-hidden my-20">
             <div>
                 <img src="./assets/about.png" alt="">
             </div>
-            <div class="w-96">
+            <div class="max-w-[700px] text-[#1f2925] space-y-5 text-base/8">
                 <div>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our
                     start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore
                     forests, create habitats for wildlife, and combat global warming.
                 </div>
-                
+
                 <div>
-                    Restoration of natural habitats
-                    Improvement of air quality
-                    Support for local communities
+                    <ul>
+                        <li>Support for local communities</li>
+                        <li>Improvement of air quality</li>
+                        <li>Restoration of natural habitats</li>
+                    </ul>
                 </div>
             </div>
+        </section>
+        <section class="bg-[#cff0dc]">
+
+            <h1 class="text-4xl pt-16 text-center font-semibold">Our Impact</h1>
+
+            <div class=" lg:flex lg:gap-0 space-y-3 p-3 justify-around py-18">
+                <div class="bg-white hover:bg-green-200 space-y-1 p-10 px-40 rounded ">
+                    <h2 class="text-green-600 text-center  font-bold text-4xl">500K+</h2>
+                    <p class="text-sm text-center mr-2  text-gray-500">Trees Planted</p>
+                </div>
+                <div class="bg-white hover:bg-green-200 space-y-1 p-10 px-40 rounded ">
+                    <h2 class="text-green-600 text-center  font-bold text-4xl">30+</h2>
+                    <p class="text-sm text-center mr-2  text-gray-500">Countries Reached</p>
+                </div>
+                <div class="bg-white hover:bg-green-200   space-y-1 p-10 px-40 rounded ">
+                    <h2 class="text-green-600 text-center  font-bold text-4xl">120+</h2>
+                    <p class="text-sm text-center mr-2  text-gray-500">Communities Involved</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="bg-[#166534] p-20">
+              <h1 class="text-3xl mb-8 text-white text-center font-semibold">Plant a Tree Today</h1>
+            <form class="bg-green-600 hover:bg-green-700 rounded-lg max-w-[600px] text-center mx-auto p-6 space-y-2">
+
+                <div>
+                    <input type="text" placeholder="Your Name" class="input outline-none border-none w-full p-4" />
+                </div>
+                <div>
+                    <input type="email" placeholder="Your Email Address" class="input border-none w-full outline-none p-4" />
+                </div>
+                <div>
+                    <input type="text" class="input w-full p-4 border-none outline-none" placeholder="Which browser do you use " list="browsers" />
+                    <datalist id="browsers">
+                        <option value="Fruit Tree"></option>
+                        <option value="Timber Tree"></option>
+                        <option value="Medicinal Tree"></option>
+                        <option value="Bamboo"></option>
+                        <option value="Aquatic Plant"></option>
+                    </datalist>
+                </div>
+                <button class="btn bg-[#facc15] text-green-700 rounded-full border-none w-full">Donate Now</button>
+            </form>
         </section>
     </main>
     <!-- Open the modal using ID.showModal() method -->
@@ -147,7 +192,7 @@
         </div>
     </dialog>
 
-    <footer class="footer sm:footer-horizontal footer-center bg-green-600 text-base-content p-4">
+    <footer class="footer sm:footer-horizontal footer-center bg-[#14532d] text-white py-6 text-base-content p-4">
         <aside>
             <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
         </aside>
