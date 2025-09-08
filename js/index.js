@@ -1,19 +1,22 @@
 // catagory-section and btn
 
 let AddtoCart = []
+ let realPrice = parseInt(document.getElementById('add-price').innerText)
+ const addPrice = document.getElementById('addedPrice')
+ console.log(addPrice)
 const loadalldata = () => {
 
 
     fetch('https://openapi.programming-hero.com/api/plants')
         .then(res => res.json())
         .then(data => {
-          
+
 
 
             displayalldata(data.plants)
         })
 
-        
+
 }
 
 const managesppiner = (status) => {
@@ -38,11 +41,11 @@ const loacdAddTOcart = (id) => {
         .then(res => res.json())
         .then(data => {
             const card = data.plants.find(cart => cart.id == id)
-            alert(` adding:`)
+            alert(` adding: ${card.name}`)
             AddtoCart.push(card)
-            
+
             displayAddToCart(AddtoCart)
-           
+
         })
 }
 
@@ -77,7 +80,7 @@ const loadmodal = (id) => {
 
             const details = data.plants.find(cart => cart.id == id)
             displaymodal(details)
-           
+
 
         })
     my_modal_1.showModal()
@@ -98,7 +101,7 @@ const displaymodal = (data) => {
                     <div class="bg-white shadow-lg rounded-2xl overflow-hidden">
 
                         <!-- Product Image -->
-                        <img src="h${image}" alt="${name}"
+                        <img src="${image}" alt="${name}"
                             class="w-full h-80 object-cover"/>
 
                         <!-- Product Details -->
@@ -129,9 +132,9 @@ const displaymodal = (data) => {
 
 }
 
-const loaddeletefromaddCard = ( id) =>{
-    
-    const filteredcard = AddtoCart.filter(del => del.id != id )
+const loaddeletefromaddCard = (id) => {
+
+    const filteredcard = AddtoCart.filter(del => del.id != id)
     console.log(filteredcard)
     AddtoCart = filteredcard
 
@@ -140,39 +143,38 @@ const loaddeletefromaddCard = ( id) =>{
 }
 
 
-let p = 0;
 const displayAddToCart = (cart) => {
-    
+
     const cartContainerdiv = document.getElementById('add-cartContainer')
     cartContainerdiv.innerHTML = ""
-     
-   cart.forEach(deta => {
-     
-   
+       let total = 0 
+    cart.forEach(deta => {
 
-    const { image, description, price, category, id, name } = deta
-    const realprice = document.getElementById('add-price')
-    let prices = parseInt(realprice.innerText)
-    let cardPrice = price
-
-    p++
-    p = prices + cardPrice
-
-
-    realprice.innerText = p
-
-    // console.log(cardPrice)
-
-
+        const { image, description, price, category, id, name } = deta
     
-     
+        if(loaddeletefromaddCard){
+    
+               total -= Number(price)
+        
+        }
+        else{
 
-    const add = document.createElement('div')
-    add.innerHTML = `
+            total += Number(price)
+        }
+
+
+        // console.log(cardPrice)
+
+
+
+
+
+        const add = document.createElement('div')
+        add.innerHTML = `
         <div  class="flex justify-between items-center bg-gray-100 p-4 rounded mt-4">
                     <div class="space-y-2">
                         <h1>${name}</h1>
-                        <p>৳<span id="addedPrice" >${price} </span>x 1 </p>
+                        <p>৳<span id="addedPrice">${price} </span> </p>
                     </div>
                     <div class="cartText">
                         <span onclick="loaddeletefromaddCard('${id}')" id="deletebtn" class="text-xl cursor-pointer text-[#8C8C8C]"> <i class="fa-solid fa-xmark"></i></span>
@@ -180,11 +182,16 @@ const displayAddToCart = (cart) => {
                 </div>
     `
 
-    cartContainerdiv.appendChild(add)
 
-   
-  } )
 
+
+        cartContainerdiv.appendChild(add)
+
+
+    })
+  
+    
+    document.getElementById('add-price').innerText = Math.abs(total)
 
 
 }
@@ -211,7 +218,7 @@ const displayalldata = (data) => {
                             <p>${description}</p>
                                 <div class=" flex justify-between items-center">
                                     <div class="btn bg-green-200 rounded-full px-6 text-[#15803d]">${category}</div>
-                                    <div class="font-bold text-lg text-green-600">৳<span>${price}</span></div>
+                                    <div class="font-bold text-lg text-green-600">৳<span id="price">${price}</span></div>
                                 </div>
                             <div class="card-actions justify-end ">
                                 <button onclick="loacdAddTOcart(${id})" class="btn text-lg font-normal py-5 text-white w-full rounded-full bg-[#15803d]">Add to Cart</button>
